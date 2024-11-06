@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="360dp"
+        android:layout_height="474dp"
+        android:layout_marginTop="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ekran1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.745">
+
+        <ImageButton
+            android:id="@+id/imgBtnSes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:onClick="sesAcKapa"
+            android:src="@drawable/baseline_volume_up_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgBtnTitresim"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/imgBtnTitresim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:onClick="btnTitresimAcKapa"
+            android:src="@drawable/baseline_vibration_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgBtnZikirListe"
+            app:layout_constraintStart_toEndOf="@+id/imgBtnSes"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgBtnZikirListe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:onClick="btnZikirListele"
+            android:src="@drawable/baseline_format_list_numbered_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgBtnTemeDegistir"
+            app:layout_constraintStart_toEndOf="@+id/imgBtnTitresim"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgBtnTemeDegistir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:onClick="btnTemaDegistir"
+            android:src="@drawable/baseline_palette_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgBtnZikirEkle"
+            app:layout_constraintStart_toEndOf="@+id/imgBtnZikirListe"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imgBtnZikirEkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:padding="10dp"
+            android:onClick="showFormDialog"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgBtnTemeDegistir"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnArtis"
+        android:layout_width="186dp"
+        android:layout_height="186dp"
+        android:layout_marginBottom="24dp"
+        android:width="160dp"
+        android:height="160dp"
+        android:background="@drawable/btn_artis"
+        android:contentDescription="artis"
+        android:onClick="btnArti"
+        android:text=""
+        app:cornerRadius="90dp"
+        app:iconSize="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.886" />
+
+    <Button
+        android:id="@+id/btnSifirla"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:width="40dp"
+        android:height="40dp"
+        android:background="@drawable/btn_artis"
+        android:contentDescription="sifirla"
+        android:onClick="zikirSayisiSifirla"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/btnGeri"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnGeri"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="36dp"
+        android:width="40dp"
+        android:height="40dp"
+        android:background="@drawable/btn_artis"
+        android:contentDescription="geri"
+        android:onClick="zikirSayisiGeri"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="265dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnArtis"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.536">
+
+        <ImageView
+            android:id="@+id/imageViewBirler"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="birler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageViewOnlar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sifir" />
+
+        <ImageView
+            android:id="@+id/imageViewOnbinler"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="onbinler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewBinler"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sifir" />
+
+        <ImageView
+            android:id="@+id/imageViewBinler"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:contentDescription="binler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewYuzler"
+            app:layout_constraintStart_toEndOf="@+id/imageViewOnbinler"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sifir" />
+
+        <ImageView
+            android:id="@+id/imageViewYuzler"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:contentDescription="yüzler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sifir" />
+
+        <ImageView
+            android:id="@+id/imageViewOnlar"
+            android:layout_width="50dp"
+            android:layout_height="75dp"
+            android:contentDescription="birler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewBirler"
+            app:layout_constraintStart_toEndOf="@+id/imageViewYuzler"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sifir" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/txtzikirsayisi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zikir Sayısı"
+        android:textColor="@color/bgColor"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/zikirSayisiEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zikir sayısını girin"
+        android:textColorHint="#c365dd"
+        android:inputType="number"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittext_background"
+        android:textSize="16sp"
+        android:textColor="#c365dd"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtzikiradeti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zikir Adı"
+        android:textColor="@color/bgColor"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/zikirAdiEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zikir Adı Girin"
+        android:background="@drawable/edittext_background"
+        android:textSize="16sp"
+        android:textColor="#c365dd"
+        android:textStyle="bold"
+        android:textColorHint="#c365dd"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtzikirDurakNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hedef Sayısı"
+        android:textColor="@color/bgColor"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:id="@+id/zikirDurakNoEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hedef sayısı girin"
+        android:background="@drawable/edittext_background"
+        android:textSize="16sp"
+        android:inputType="number"
+        android:textColor="#c365dd"
+        android:textStyle="bold"
+        android:textColorHint="#c365dd"/>
+</LinearLayout>

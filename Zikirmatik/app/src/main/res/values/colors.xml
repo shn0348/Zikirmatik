@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#819ca9</color>
+    <color name="colorPrimaryDark2">#79868C</color>
+    <color name="colorAccent">#BE55D7</color>
+    <color name="btnRenk">#819ca9</color>
+    <color name="bgColor">#455a64</color>
+    <color name="toolbarColor">#1c313a</color>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#0096a6</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="selected_background">#ffaa3f</color>
+    <color name="default_background">#3d3d3d</color>
+    <color name="btnSilbackground">#3E7185</color>
+</resources>
